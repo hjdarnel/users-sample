@@ -1,5 +1,3 @@
 import { IUser } from './user';
 
-export {
-    IUser
-};
+export { IUser };

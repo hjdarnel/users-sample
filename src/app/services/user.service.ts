@@ -3,10 +3,10 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 
 import { IUser } from '../models/authentication';
-import USERS from './users.seed'
+import USERS from './users.seed';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class UserService {
     private _users = new BehaviorSubject<IUser[]>(USERS);
@@ -19,9 +19,9 @@ export class UserService {
 
     public getById(id: string): IUser {
         let users = this._users.getValue();
-        return users.filter(x => x.id == id)[0];
+        return users.filter((x) => x.id == id)[0];
     }
-    
+
     public addUser(user: IUser) {
         let users = this._users.getValue();
         user.id = uuidv4();
@@ -34,21 +34,20 @@ export class UserService {
     public updateUser(id: string, updated: IUser) {
         let users = this._users.getValue();
 
-        users = users.map(x => {
+        users = users.map((x) => {
             if (x.id != id) {
                 return x;
-            }
-            else {
+            } else {
                 return updated;
             }
-        })
+        });
 
         this._users.next(users);
     }
 
     public deleteUser(id: string) {
         let users = this._users.getValue();
-        users = users.filter(x => x.id != id);
+        users = users.filter((x) => x.id != id);
         this._users.next(users);
     }
 }

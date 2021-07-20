@@ -1,15 +1,15 @@
-import { Component, OnInit, Inject, OnDestroy, ViewChild } from "@angular/core";
-import { Subject } from "rxjs";
-import { filter, takeUntil } from "rxjs/operators";
-import { MatExpansionPanel } from "@angular/material/expansion";
+import { Component, OnInit, Inject, OnDestroy, ViewChild } from '@angular/core';
+import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
+import { MatExpansionPanel } from '@angular/material/expansion';
 
 @Component({
-    selector: "app-root",
-    templateUrl: "./app.component.html",
-    styleUrls: ["./app.component.scss"],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-    title = "Users Sample App";
+    title = 'Users Sample App';
     isIframe = false;
     sideNavOpen = false;
 

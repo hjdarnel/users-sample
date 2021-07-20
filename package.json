@@ -8,7 +8,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "jest",
-        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+        "prettier-format": "prettier 'src/**/*.ts' --write"
     },
     "private": true,
     "dependencies": {
@@ -50,9 +50,10 @@
         "typescript": "~4.2.4"
     },
     "prettier": {
-        "trailingComma": "es5",
+        "printWidth": 110,
+        "trailingComma": "none",
         "tabWidth": 4,
-        "semi": false,
+        "semi": true,
         "singleQuote": true
       }
 }
