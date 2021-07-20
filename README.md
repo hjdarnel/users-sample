@@ -1,4 +1,4 @@
-# Angular12SampleApp
+# Users Test App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0-rc.0.
 
@@ -17,10 +17,6 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `npm run e2e` to execute the end-to-end tests via [Jest](https://jestjs.io/).
 
 ## Further help
 

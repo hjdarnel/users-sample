@@ -26,29 +26,29 @@ import { UserService } from './services';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
-    declarations: [AppComponent, UsersComponent, UserProfileComponent],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatListModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatExpansionModule,
-        MatCardModule,
-        MatTableModule,
-        MatPaginatorModule,
-        MatSortModule,
-        MatInputModule,
-        MatSnackBarModule,
-        HttpClientModule
-    ],
-    providers: [UserService],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent, UsersComponent, UserProfileComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatInputModule,
+    MatSnackBarModule,
+    HttpClientModule
+  ],
+  providers: [UserService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

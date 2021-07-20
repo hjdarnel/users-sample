@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "angular12-sample-app",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  },
+  "defaultProject": "users-sample-app",
   "newProjectRoot": "projects",
   "projects": {
-    "angular12-sample-app": {
+    "users-sample-app": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,7 +48,7 @@
             "main": "src/main.ts",
             "namedChunks": false,
             "optimization": false,
-            "outputPath": "dist/angular12-sample-app",
+            "outputPath": "dist/users-sample-app",
             "polyfills": "src/polyfills.ts",
             "scripts": [],
             "sourceMap": true,
@@ -60,29 +63,26 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "configurations": {
             "production": {
-              "devServerTarget": "angular12-sample-app:serve:production"
+              "devServerTarget": "users-sample-app:serve:production"
             }
           },
           "options": {
-            "devServerTarget": "angular12-sample-app:serve",
+            "devServerTarget": "users-sample-app:serve",
             "protractorConfig": "e2e/protractor.conf.js"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular12-sample-app:build"
+            "browserTarget": "users-sample-app:build"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "exclude": [
-              "**/node_modules/**"
-            ],
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -90,12 +90,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular12-sample-app:build:production"
+              "browserTarget": "users-sample-app:build:production"
             }
           },
           "options": {
-            "browserTarget": "angular12-sample-app:build",
-            "proxyConfig": "./proxy.conf.json"
+            "browserTarget": "users-sample-app:build"
           }
         },
         "test": {
