@@ -1,0 +1,31 @@
+a.title {
+    color: white;
+}
+
+mat-sidenav-content {
+    background-color: white;
+}
+
+mat-expansion-panel {
+    mat-expansion-panel-header {
+        padding: 0 16px;
+        font-weight: 500;
+    }
+}
+
+mat-sidenav-container {
+    height: calc(100% - 64px);
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    height: 40px;
+
+    mat-icon {
+        margin-right: 8px;
+    }
+}

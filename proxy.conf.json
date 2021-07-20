@@ -1,0 +1,29 @@
+{
+    "/api/core/*": {
+        "target": "http://localhost:5200/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api/core": "http://localhost:5200/api/core"
+        }
+    },
+    "/api/loads/*": {
+        "target": "http://localhost:5202/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api/loads": "http://localhost:5202/api/loads"
+        }
+    },
+    "/api/wms/*": {
+        "target": "http://localhost:5207/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api/wms": "http://localhost:5207/api/wms"
+        }
+    }
+}

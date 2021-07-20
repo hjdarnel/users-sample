@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSideNav()">
+        <mat-icon aria-hidden="false" aria-label="Expand sidenav">menu</mat-icon>
+    </button>
+
+    <a class="title" href="/">{{ title }}</a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="sideNavOpen" [mode]="'push'" (closedStart)="onSideNavClosedStart()">
+        <button mat-button class="menu-button" [routerLink]="['/']">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <mat-divider></mat-divider>
+
+        <mat-expansion-panel #mangementPanel>
+            <mat-expansion-panel-header>
+              <mat-panel-title class="menu-button" >
+                <mat-icon>groups</mat-icon>
+                <span>Management</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button mat-button class="menu-button" [routerLink]="['users']">
+                <mat-icon>manage_accounts</mat-icon>
+                <span>Users</span>
+            </button>
+          </mat-expansion-panel>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="container">
+            <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
+            <router-outlet *ngIf="!isIframe"></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

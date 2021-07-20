@@ -1,0 +1,11 @@
+.user-container {
+  padding: 1.3rem 0;
+
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .mat-form-field:last-of-type {
+    margin-right: 1rem;
+  }
+}

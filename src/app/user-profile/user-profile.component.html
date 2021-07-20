@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-toolbar color="primary">{{existingUser ? "Edit" : "Add"}} User {{existingUser ? profileForm.value.firstName : ''}}</mat-toolbar>
+
+  <div class="user-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSave()">
+      <mat-form-field hintLabel="Max 50 characters" appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input formControlName="firstName" required matInput #input maxlength="50" placeholder="Erlich" />
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+      <mat-form-field hintLabel="Max 50 characters" appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastName" required matInput #input maxlength="50" placeholder="Bachman" />
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" type="email" required matInput #input maxlength="50" placeholder="gavin@hooli.com" />
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input formControlName="phoneNumber" required type="phone" matInput #input placeholder="(555) 555-5555" />
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!profileForm.valid"color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </form>
+  </div>
+</mat-card>
