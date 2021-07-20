@@ -7,23 +7,27 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav [(opened)]="sideNavOpen" [mode]="'push'" (closedStart)="onSideNavClosedStart()">
+    <mat-sidenav [(opened)]="sideNavOpen" mode="push">
         <button mat-button class="menu-button" [routerLink]="['/']">
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </button>
         <mat-divider></mat-divider>
 
-        <mat-expansion-panel #mangementPanel>
+        <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
               <mat-panel-title class="menu-button" >
                 <mat-icon>groups</mat-icon>
-                <span>Management</span>
+                <span>Users</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <button mat-button class="menu-button" [routerLink]="['users']">
+            <button mat-button class="menu-button" [routerLink]="['/']">
                 <mat-icon>manage_accounts</mat-icon>
-                <span>Users</span>
+                <span>List</span>
+            </button>
+            <button mat-button class="menu-button" [routerLink]="['new']">
+                <mat-icon>person_add</mat-icon>
+                <span>Add</span>
             </button>
           </mat-expansion-panel>
 

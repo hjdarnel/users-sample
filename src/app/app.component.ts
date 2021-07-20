@@ -11,8 +11,6 @@ export class AppComponent implements OnInit {
   isIframe = false;
   sideNavOpen = false;
 
-  @ViewChild(MatExpansionPanel) mangementPanel: MatExpansionPanel;
-
   constructor() {}
   ngOnInit(): void {
     this.isIframe = window !== window.parent && !window.opener; // Remove this line to use Angular Universal
@@ -20,9 +18,5 @@ export class AppComponent implements OnInit {
 
   toggleSideNav(): void {
     this.sideNavOpen = !this.sideNavOpen;
-  }
-
-  onSideNavClosedStart(): void {
-    this.mangementPanel.close();
   }
 }

@@ -17,6 +17,10 @@ mat-sidenav-container {
     height: calc(100% - 64px);
 }
 
+mat-toolbar > button {
+    margin-right: 10px;
+}
+
 .menu-button {
     width: 100%;
     display: flex;
